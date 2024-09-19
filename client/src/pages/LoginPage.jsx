@@ -9,7 +9,7 @@ const LoginPage = () => {
   const { setUserInfo } = useContext(UserContext);
 
   // const ServerURL = process.env.REACT_APP_BACKEND_URL;
-  const ServerURL = "http://localhost:4000";
+  const ServerURL = "https://inkwell-api.onrender.com";
 
   async function login(ev) {
     ev.preventDefault();
