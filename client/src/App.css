@@ -1,0 +1,331 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  padding: 10px;
+  max-width: 960px;
+  margin: 0 auto;
+  /* border: 2px solid black; */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* For the image */
+img {
+  width: 50%; /* Adjust the width according to your preference */
+  max-width: 500px; /* Set a max width to ensure it's responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto; /* Center the image */
+}
+
+/* For responsiveness */
+@media (max-width: 768px) {
+  img {
+    width: 70%; /* Make the image larger on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  img {
+    width: 90%; /* Further adjust the image size on very small screens */
+  }
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header img.logo {
+  max-width: 150px; /* Set the max width */
+  width: 100%; /* Make sure it scales based on the parent container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive styles for smaller devices */
+@media (max-width: 768px) {
+  header img.logo {
+    max-width: 120px; /* Reduce logo size on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  header img.logo {
+    max-width: 90px; /* Further reduce logo size on small screens */
+  }
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+}
+
+div.post {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-template-columns: 0.9fr 1.1fr; */
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 700px) {
+  div.post {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
+
+div.post div.texts h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+div.post div.texts a {
+  text-decoration: none;
+  color: inherit;
+}
+
+div.post p.info {
+  margin: 6px 0;
+  color: #888;
+  font-size: 0.7rem;
+  font-weight: bold;
+  display: flex;
+  gap: 10px;
+}
+
+div.post p.info a {
+  text-decoration: none;
+  color: #333;
+}
+
+div.post p.summary {
+  margin: 10px 0;
+  line-height: 1.4rem;
+}
+
+form.login,
+form.register {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+
+input {
+  display: inline;
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 5px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+button {
+  width: 100%;
+  display: block;
+  /* background-color: #555; */
+  background-color: #b100ff;
+  border: 0;
+  color: #fff;
+  border-radius: 5px;
+  padding: 7px 0;
+}
+
+/* c */
+
+form.login h1,
+form.register h1 {
+  text-align: center;
+}
+
+div.post-page div.image {
+  max-height: 300px;
+  display: flex;
+  overflow: hidden;
+  margin: 1.5rem;
+}
+
+div.post-page div.image img {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+
+div.post-page a {
+  color: #333;
+  text-decoration: underline;
+}
+
+div.post-page h1 {
+  text-align: center;
+  margin: 10px 0 5px;
+}
+
+div.post-page time {
+  text-align: center;
+  display: block;
+  font-size: 0.8rem;
+  color: #aaa;
+  
+  margin: 0.7rem 0 0.2rem 0;
+}
+
+div.post-page div.author {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+div.post-page div.content p {
+  line-height: 1.6rem;
+}
+
+div.edit-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+div.post-page a.btn,
+div.post-page button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 150px; /* Set a fixed width*/
+  height: 45px; /*Set a fixed height*/
+}
+
+/* Specific styles for the edit button */
+div.post-page a.edit-btn {
+  background-color: #2563eb; /* Edit-specific color */
+}
+
+/* Specific styles for the delete button */
+div.post-page button.delete-btn {
+  background-color: #e74c3c; /* Delete-specific color */
+  /* border: none; */
+  /* cursor: pointer; */
+}
+
+a svg {
+  height: 20px;
+}
+
+button svg {
+  height: 20px;
+}
+
+/* Comment Section */
+div.comments-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+div.comments-section h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+div.comments-section h3::after {
+  content: "(" attr(data-comment-count) ")";
+  margin-left: 10px;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+div.comment {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  border-left: 4px solid #ddd;
+}
+
+div.comment strong {
+  font-size: 1rem;
+  color: #0073e6;
+}
+
+div.comment p {
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Comment Form */
+form.comment-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+form.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: vertical;
+  min-height: 80px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+form.comment-form button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+form.comment-form button:hover {
+  background-color: #218838;
+}
+
+/* General */
+div.comments-section h3 svg {
+  margin-right: 5px;
+  color: #888;
+}
