@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
 
-const ServerURL = "http://localhost:4000";
+const ServerURL = "https://inkwell-api.onrender.com";
 // console.log("Server URL:", ServerURL);
 
 const Header = () => {
