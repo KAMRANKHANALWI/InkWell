@@ -31,6 +31,11 @@ connectToMongoDb(process.env.MONG0URL).then(() =>
   console.log(`MongoDB Connected`)
 );
 
+app.get("/", (req, res) => {
+  console.log("API is Working Buddy!");
+  return res.send("API is Working Buddy!");
+}
+
 app.post("/register", async (req, res) => {
   try {
     const { username, email, password } = req.body;
